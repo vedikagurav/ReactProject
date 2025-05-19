@@ -31,7 +31,7 @@ function CreateUsers() {
       return;
     }
 
-    axios.post("http://localhost:3001/createPO", formData)
+    axios.post("https://react-project-api-three.vercel.app/createPO", formData)
       .then(() => {
         alert("PO Record Created Successfully!");
         navigate("/");
