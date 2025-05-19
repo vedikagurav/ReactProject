@@ -21,7 +21,7 @@ function UpdateUsers() {
 
   useEffect(() => {
   axios
-    .get(`http://localhost:3001/getPO/${id}`)
+    .get(`https://react-project-api-three.vercel.app/getPO/${id}`)
     .then((res) => {
       const data = res.data;
       setFormData({
@@ -57,7 +57,7 @@ function UpdateUsers() {
   e.preventDefault();
 
   axios
-    .put(`http://localhost:3001/updatePO/${id}`, formData)
+    .put(`https://react-project-api-three.vercel.app/updatePO/${id}`, formData)
     .then(() => {
       alert("Record updated successfully!");
       navigate("/");
