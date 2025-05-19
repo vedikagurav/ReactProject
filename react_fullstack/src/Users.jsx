@@ -10,7 +10,7 @@ function Users() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001")
+      .get("https://react-project-api-three.vercel.app")
       .then((result) => setUsers(result.data))
       .catch((err) => console.log(err));
   }, []);
@@ -18,7 +18,7 @@ function Users() {
   const handleDelete = (id) => {
     if (!window.confirm("Are you sure you want to delete this record?")) return;
     axios
-      .delete(`http://localhost:3001/deletePO/${id}`)
+      .delete(`https://react-project-api-three.vercel.app/deletePO/${id}`)
       .then(() => {
         setUsers(users.filter((user) => user._id !== id));
       })
